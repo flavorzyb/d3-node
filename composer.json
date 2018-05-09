@@ -2,5 +2,13 @@
     "require": {
         "vlucas/phpdotenv": "^2.4",
         "phpoffice/phpspreadsheet": "^1.2"
+    },
+
+    "autoload": {
+        "files": [
+            "common.php"
+        ],
+        "psr-4": {
+        }
     }
 }
