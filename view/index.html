@@ -29,10 +29,10 @@
 <body>
 <script src="js/d3.v3.js"></script>
 <script>
-
+    var winWidth = document.body.clientWidth;
     var margin = {top: 20, right: 120, bottom: 20, left: 180},
-        width = 960 - margin.right - margin.left,
-        height = 480 - margin.top - margin.bottom;
+        width = winWidth - margin.right - margin.left,
+        height = 800 - margin.top - margin.bottom;
 
     var i = 0,
         duration = 750,
@@ -61,7 +61,7 @@
             if (d.children) {
                 d._children = d.children;
                 d._children.forEach(collapse);
-                d.children = null;
+                // d.children = null;
             }
         }
 
