@@ -85,7 +85,12 @@ class NodeService
     protected function loadRule() {
         $sql = "SELECT id, name, `type`, `url`, `params`, extend_type, expression, result FROM `tb_rule` WHERE `status` = 0";
         $query = $this->pdo->query($sql);
-        $this->ruleArray = $query->fetchAll(PDO::FETCH_ASSOC);
+        $dataArray = $query->fetchAll(PDO::FETCH_ASSOC);
+        $this->ruleArray = [];
+        foreach ($dataArray as $v) {
+            $id = intval($v['id']);
+            $this->ruleArray[$id] = $v;
+        }
     }
 
     /**
@@ -276,6 +281,8 @@ class NodeService
                 if (null != $result) {
                     if (isset($result['low']) && isset($result['high'])) {
                         $this->ruleResultCache[$ruleId] = " >= {$result['low']} && <= {$result['high']} ";
+                    } elseif (isset($result['start']) && isset($result['end'])) {
+                        $this->ruleResultCache[$ruleId] = " >= {$result['start']} && <= {$result['end']} ";
                     } elseif (isset($result['month'])) {
                         $this->ruleResultCache[$ruleId] = " >= {$result['month']} ";
                     }
