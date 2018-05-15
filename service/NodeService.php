@@ -27,6 +27,8 @@ class NodeService
      */
     private $ruleArray = [];
 
+    private $ruleResultCache = [];
+
     /**
      * NodeService constructor.
      */
@@ -69,14 +71,19 @@ class NodeService
     protected function loadNodeMap() {
         $sql = "SELECT id, r_n_id, r_id, params, `order` FROM `tb_rule_node_map` WHERE `status` = 0";
         $query = $this->pdo->query($sql);
-        $this->nodeMapArray = $query->fetchAll(PDO::FETCH_ASSOC);
+        $dataArray = $query->fetchAll(PDO::FETCH_ASSOC);
+        $this->nodeMapArray = [];
+        foreach ($dataArray as $v) {
+            $nid = intval($v['r_n_id']);
+            $this->nodeMapArray[$nid] = ['nodeId' => $nid, 'ruleId' => intval($v['r_id']), 'params' => $v['params'], 'order' => intval($v['order'])];
+        }
     }
 
     /**
      * 加载tb_rule数据表
      */
     protected function loadRule() {
-        $sql = "SELECT id, name, `type`, extend_type, expression, result FROM `tb_rule` WHERE `status` = 0";
+        $sql = "SELECT id, name, `type`, `url`, `params`, extend_type, expression, result FROM `tb_rule` WHERE `status` = 0";
         $query = $this->pdo->query($sql);
         $this->ruleArray = $query->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -232,6 +239,65 @@ class NodeService
     }
 
     /**
+     * 根据node id 获取其值的范围
+     *
+     * @param int $nodeId
+     * @return string
+     */
+    protected function getNodeRuleRangeValue($nodeId) {
+        if (isset($this->nodeMapArray[$nodeId])) {
+            // ['nodeId' => 123, 'ruleId' => 33, 'params' => '', 'order' => 111)]
+            $node = $this->nodeMapArray[$nodeId];
+            if (isset($this->ruleArray[$node['ruleId']])) {
+                return '(' . $this->getRuleRangeValue($node['ruleId']) . ')';
+            }
+        }
+
+        return '';
+    }
+
+    /**
+     * 根据rule id 获取 rule值范围
+     * @param int $ruleId
+     * @return string
+     */
+    protected function getRuleRangeValue($ruleId) {
+        if (isset($this->ruleResultCache[$ruleId])) {
+            return $this->ruleResultCache[$ruleId];
+        }
+
+        $rule = $this->ruleArray[$ruleId];
+
+        $this->ruleResultCache[$ruleId] = '';
+        if ($rule['extend_type'] == 0) {
+            if ($rule['expression']) {
+            } else {
+                $result = json_decode($rule['params'], true);
+                if (null != $result) {
+                    if (isset($result['low']) && isset($result['high'])) {
+                        $this->ruleResultCache[$ruleId] = " >= {$result['low']} && <= {$result['high']} ";
+                    } elseif (isset($result['month'])) {
+                        $this->ruleResultCache[$ruleId] = " >= {$result['month']} ";
+                    }
+                } else {
+                    $url = trim($rule['url']);
+                    if (('' != $url)
+                        && ('' == $rule['expression'])
+                        && ('' == $rule['params'])) {
+                        $this->ruleResultCache[$ruleId] = " {$rule['name']} ";
+                    } else {
+                        var_dump($rule);
+                    }
+                }
+            }
+        } else {
+            var_dump($rule);
+        }
+
+        return $this->ruleResultCache[$ruleId];
+    }
+
+    /**
      * 格式化为json数据
      *
      * @param mixed $data
@@ -243,14 +309,14 @@ class NodeService
         if (is_array($data)) {
             foreach ($data as $k => $v) {
                 $result .= "{";
-                $result .= "\"name\": \"{$nodeNameArray[$k]['name']}\",";
+                $result .= "\"name\": \"{$nodeNameArray[$k]['name']}{$this->getNodeRuleRangeValue($k)}\",";
                 $result .= "\"children\": [";
                 $result .= substr($this->output($v, $nodeNameArray), 0, -1);
                 $result .= "]";
                 $result .= "},";
             }
         } else {
-            $result .= "{\"name\": \"{$nodeNameArray[$data]['name']}\"},";
+            $result .= "{\"name\": \"{$nodeNameArray[$data]['name']}{$this->getNodeRuleRangeValue($data)}\"},";
         }
 
         return $result;
