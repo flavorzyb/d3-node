@@ -6,7 +6,8 @@
 
     "autoload": {
         "files": [
-            "common.php"
+            "common.php",
+            "service/NodeService.php"
         ],
         "psr-4": {
         }
