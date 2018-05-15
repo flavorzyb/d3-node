@@ -35,6 +35,9 @@ class NodeService
         $this->pdo = createPdo();
     }
 
+    /**
+     * 加载所有需要的数据
+     */
     public function loadAllData() {
         $this->loadNode();
         $this->loadNodeRelations();
@@ -42,30 +45,46 @@ class NodeService
         $this->loadRule();
     }
 
+    /**
+     * 加载node数据表
+     */
     protected function loadNode() {
         $sql = "SELECT id, name, weight FROM `tb_rule_node` WHERE `status` = 0";
         $query = $this->pdo->query($sql);
         $this->nodeArray = $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * 加载node_relation数据表
+     */
     protected function loadNodeRelations() {
         $sql = "SELECT id, node_id, parent_id FROM `tb_rule_node_relation` WHERE `status` = 0";
         $query = $this->pdo->query($sql);
         $this->nodeRelationArray = $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * 加载tb_rule_node_map数据表
+     */
     protected function loadNodeMap() {
         $sql = "SELECT id, r_n_id, r_id, params, `order` FROM `tb_rule_node_map` WHERE `status` = 0";
         $query = $this->pdo->query($sql);
         $this->nodeMapArray = $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * 加载tb_rule数据表
+     */
     protected function loadRule() {
         $sql = "SELECT id, name, `type`, extend_type, expression, result FROM `tb_rule` WHERE `status` = 0";
         $query = $this->pdo->query($sql);
         $this->ruleArray = $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * 构建node id的名称映射关系map
+     * @return array
+     */
     public function buildNodeNameMap() {
         $result = [0 => ['name' => '风控根节点', 'id' => 0, 'weight' => 0]];
         foreach ($this->nodeArray as $v) {
@@ -77,6 +96,7 @@ class NodeService
     }
 
     /**
+     * 构建 节点=》父节点 映射关系map
      * @return array
      */
     public function buildNodeParentIndex() {
@@ -91,6 +111,7 @@ class NodeService
     }
 
     /**
+     * 构建node的父节点树
      * @param array $indexArray
      * @return array
      */
@@ -107,8 +128,9 @@ class NodeService
     }
 
     /**
+     * 根据节点ID查找其所有父节点
      * @param array $dataArray
-     * @param $nodeId
+     * @param int $nodeId
      * @param array $path
      * @return array
      */
@@ -127,6 +149,7 @@ class NodeService
     }
 
     /**
+     * 构建节点树
      * @return array
      */
     public function buildNodeTree() {
@@ -152,6 +175,12 @@ class NodeService
         return $result;
     }
 
+    /**
+     * 格式化节点树，去除空节点及构建过程中产生的垃圾节点数据
+     *
+     * @param array $dataArray
+     * @return array|mixed
+     */
     protected function formatNodeTree(array &$dataArray) {
         if (sizeof($dataArray) > 1 && isset($dataArray[0])) {
             unset($dataArray[0]);
@@ -203,7 +232,9 @@ class NodeService
     }
 
     /**
-     * @param $data
+     * 格式化为json数据
+     *
+     * @param mixed $data
      * @param array $nodeNameArray
      * @return string
      */
