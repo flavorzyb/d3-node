@@ -23,6 +23,11 @@ class RuleService
     private $ruleExtendMapArray = [];
 
     /**
+     * @var array
+     */
+    private $ruleExtendNameExpression = [];
+
+    /**
      * NodeService constructor.
      */
     public function __construct()
@@ -131,5 +136,28 @@ class RuleService
     public function getRuleExpression(): array
     {
         return $this->ruleExpression;
+    }
+
+    private function executeRuleExtendNameExpression() {
+        
+    }
+
+    private function parseRuleExtendNameExpressionStr($str) {
+        //解析表达式
+        return preg_replace_callback(
+            "/@[0-9]+/",
+            function ($matches) {
+                $id = intval(str_replace('@', '', $matches[0]));
+                if (!isset($this->ruleExpression[$id])) {
+                    if (!isset($this->ruleArray[$id])) {
+                        throw new Exception("can not found rule id({$id}).");
+                    }
+
+                    $this->parseRuleExpression($this->ruleArray[$id]);
+                }
+
+                return $this->ruleExpression[$id];
+            },
+            $str);
     }
 }
