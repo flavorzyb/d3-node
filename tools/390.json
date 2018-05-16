@@ -1,0 +1,2371 @@
+{
+    "score": 10.261526003106292,
+    "desc": " expresssion: 1, result: [\"credit\" => @391, \"message\" => @392, \"result\"=>@393, \"tree\"=>\"TreeArcher\"]; expresssion: @486 == 1 && (@393 != 1 && @393 != 2  && @219 ==1 && @399 == 1 && @397 == 0), result: [\"credit\" => @391, \"message\" => @392, \"result\"=>2, \"tree\"=>\"TreeArcher\"]; expresssion: @501 == 5 && @204 == 0 && @393 == 1, result: [\"credit\" => @391, \"message\" => @392, \"result\"=>2, \"tree\"=>\"TreeArcher\"];",
+    "childResults": [
+        {
+            "score": 1000.9339554965353,
+            "desc": "",
+            "childResults": [],
+            "ruleName": "信用白条白名单",
+            "ruleId": 486,
+            "type": 0,
+            "extendType": 0
+        },
+        {
+            "score": 10.1173576009905,
+            "desc": " expresssion: @264 >= 2, result: [\"interval\"=>0,\"head_code\"=>\"D2\",\"back_code\"=>\"25\",\"txt\"=>\"存在多笔进行中订单\",\"keep_limit\"=>true]; expresssion: @398 == 1 && @399 == 1 && @219 == 1, result: 1; expresssion: @398 == 2 && @399 == 1, result: 2; expresssion: @398 == 1 && @399 == 1 && @219 <= 0, result: 2; expresssion: @398 == 1 &&@399 != 1, result: @399; expresssion: @398 == 2  && @399 != 1, result: @399; expresssion: 1, result: @398; expresssion: @608 == 1 && @399 == 1, result: 2;",
+            "childResults": [
+                {
+                    "score": 1003.3931337518022,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "当前进行中的借款数量",
+                    "ruleId": 264,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 10.277745252173442,
+                    "desc": " expresssion: @397 > 0, result: [\"interval\"=> 0,\"head_code\"=>\"D1\",\"back_code\"=> \"01\",\"txt\"=>\"命中禁止项\"]; expresssion: @391 < @211 && @204 == 0 && @391 > 0, result: [\"interval\"=>0,\"head_code\"=>\"D1\", \"back_code\"=>\"10\",\"txt\"=>\"新用户借款金额大于授信额度445\"]; expresssion: @391 < @211 && @204 == 0 && @391 == -1, result: [\"interval\"=>1,\"head_code\"=>\"D1\",\"back_code\"=>\"10\", \"keep_limit\"=>true,\"txt\"=>\"新用户借款金额大于授信额度446\"]; expresssion: @391 < @211 && @204 == 1, result: 2; expresssion: @391 >= @211 && @204 == 1, result: 1; expresssion: @391 >= @211 && @204 == 0  &&  @211 >= 200 && @404 > 7, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\" => \"新用户欺诈分>7\"]; expresssion: @391>=@211 && @204==0 && @211>=200 && @404<=6.5, result: 1; expresssion: @391>=@211 && @204==0 && @211>=200 && @404 >6.5  && @404 <=7, result: 2; expresssion: 1, result: [\"interval\"=>0,\"head_code\"=>\"D2\",\"back_code\"=>\"14\",\"txt\" => \"无特别原因，拒绝放款\"]; expresssion: @261 > 0 && @261 < 50, result: 2;",
+                    "childResults": [
+                        {
+                            "score": 10.356457595532474,
+                            "desc": " expresssion: @64 == 2, result: 1; expresssion: @65 == 2, result: 1; expresssion: @68 == 2, result: 1; expresssion: @73 == 2, result: 1; expresssion: @485 == 1, result: 1; expresssion: @387 == 2 , result: 1; expresssion: @75 == 2, result: 1; expresssion: @23 == 2, result: 1; expresssion: @24 == 2, result: 1; expresssion: @387 == 2 , result: 1; expresssion: @610 == 1, result: 1;",
+                            "childResults": [
+                                {
+                                    "score": 1000.6265458609855,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "芝麻信用行业关注名单逾期未处理",
+                                    "ruleId": 64,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1001.9651765412527,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "芝麻信用行业关注名单黑名单",
+                                    "ruleId": 65,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1000.2149548487803,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "蜜罐黑名单",
+                                    "ruleId": 68,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1003.9455847979352,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "白骑士反欺诈风险名单",
+                                    "ruleId": 73,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1001.2789572583713,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "极速钱包黑名单",
+                                    "ruleId": 485,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1000.8921178247377,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "百融特殊名单",
+                                    "ruleId": 387,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1003.7714771599345,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "同盾其他黑名单",
+                                    "ruleId": 75,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1002.7798859521715,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "同盾手机网贷黑名单",
+                                    "ruleId": 23,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1000.9806277867093,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "同盾身份证网贷黑名单",
+                                    "ruleId": 24,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 1003.8609357925698,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "信用白条黑名单",
+                                    "ruleId": 610,
+                                    "type": 0,
+                                    "extendType": 0
+                                }
+                            ],
+                            "ruleName": "信用白条禁止项",
+                            "ruleId": 397,
+                            "type": 1,
+                            "extendType": 1
+                        },
+                        {
+                            "score": 10.701400709025869,
+                            "desc": " expresssion: (@394 + @607 + @203)  > @395 && @395 > 0 , result: round((@394 + @607 + @203)/100)*100; expresssion: (@394 + @607 + @203) <= @395, result: round(@395/100)*100;",
+                            "childResults": [
+                                {
+                                    "score": 10.953547711631492,
+                                    "desc": " expresssion:  @350  < 1000, result: 1000; expresssion: @350 > 3000 , result: 3000; expresssion: @350 >= 1000 && @350 <= 3000, result: @350;",
+                                    "childResults": [
+                                        {
+                                            "score": 10.952024569970849,
+                                            "desc": " expresssion: 1, result: 1500; expresssion: round(( @354 + @355 + @356 + @357 + @358 + @359 + @360)/100)*100 < 1000, result: 1000; expresssion: (round(( @354 + @355 + @356 + @357 + @358 + @359 + @360)/100)*100) >= 500 && (round(( @354 + @355 + @356 + @357 + @358 + @359 + @360)/100)*100) < 1000, result: 1000; expresssion: round(( @354 + @355 + @356 + @357 + @358 + @359 + @360)/100)*100 >= 1000, result: 1500;",
+                                            "childResults": [
+                                                {
+                                                    "score": 10.415316303786136,
+                                                    "desc": " expresssion: @41 < 550, result: 0; expresssion: @41 < 600, result: 200; expresssion: @41 < 650, result: 300; expresssion: @41 < 700, result: 400; expresssion: @41 >= 700, result: 500;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1001.3178311307506,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "芝麻分",
+                                                            "ruleId": 41,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "芝麻分额度(copy307 => 354)",
+                                                    "ruleId": 354,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.541209844253755,
+                                                    "desc": " expresssion: @78 < 500, result: 0; expresssion: @78 >= 500 && @78 < 750, result: 30; expresssion: @78 >= 750 && @78 < 1000, result: 100; expresssion: @78 < 1500, result: 200; expresssion: @78 < 2000, result: 300; expresssion: @78 < 2500, result: 400; expresssion: @78 >= 2500, result: 500;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1001.4604676761551,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "支付宝花呗额度",
+                                                            "ruleId": 78,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "花呗额度(copy308 => 355)",
+                                                    "ruleId": 355,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.456386262543543,
+                                                    "desc": " expresssion: @2 < 6, result: 0; expresssion: @2 < 12, result: 50; expresssion: @2 < 24, result: 100; expresssion: @2 < 36, result: 200; expresssion: @2 < 60, result: 300; expresssion: @2 >= 60, result: 400;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1000.3227327746322,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "实名时间限制规则",
+                                                            "ruleId": 2,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "手机实名时间额度(copy309 => 356)",
+                                                    "ruleId": 356,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.891131986370745,
+                                                    "desc": " expresssion: @39 > 0 && @39 < 30, result: 100; expresssion: @39 >= 30 && @39 <= 90, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1003.06320662105,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "第一联系人最晚沟通时间",
+                                                            "ruleId": 39,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "第一联系人最晚沟通时间额度(copy310 => 357)",
+                                                    "ruleId": 357,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.063653296673309,
+                                                    "desc": " expresssion: @14 >=30 && @14<50, result: 50; expresssion: @14>=50 && @14<150, result: 100; expresssion: @14>=150 && @367<300, result: 200;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1003.0491942958392,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "判断通讯录手机号数量",
+                                                            "ruleId": 14,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        },
+                                                        {
+                                                            "score": 100.88781812019702,
+                                                            "desc": "expression: 0.5* @369 + 0.5 * @370",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 100.45553853262383,
+                                                                    "desc": "expression:@378 * 0.5 + @379 * 0.5",
+                                                                    "childResults": [
+                                                                        {
+                                                                            "score": 10.788835010669793,
+                                                                            "desc": " expresssion: @42 >= 0 && @42 <=5, result: 0; expresssion: @42<=10 && @42 > 5, result: 50; expresssion: @42>10 && @42<=100, result: 100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1002.8938306981529,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "蜜罐黑中介分",
+                                                                                    "ruleId": 42,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "黑中介分[e](copy140 => 378)",
+                                                                            "ruleId": 378,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 100.06926097398205,
+                                                                            "desc": "expression:@385 * 0.5 + @386 * 0.5",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 10.168698624280903,
+                                                                                    "desc": " expresssion: @43 >=0 && @43 < 5, result: 0; expresssion: @43 < 10, result: 50;",
+                                                                                    "childResults": [
+                                                                                        {
+                                                                                            "score": 1000.3080258130144,
+                                                                                            "desc": "",
+                                                                                            "childResults": [],
+                                                                                            "ruleName": "蜜罐近7天查询次数",
+                                                                                            "ruleId": 43,
+                                                                                            "type": 0,
+                                                                                            "extendType": 0
+                                                                                        }
+                                                                                    ],
+                                                                                    "ruleName": "7天内查询次数[e](copy141 => 385)",
+                                                                                    "ruleId": 385,
+                                                                                    "type": 1,
+                                                                                    "extendType": 1
+                                                                                },
+                                                                                {
+                                                                                    "score": 10.451488003114909,
+                                                                                    "desc": " expresssion: @44 >= 0 && @44 < 10, result: 0; expresssion: @44 < 15, result: 50;",
+                                                                                    "childResults": [
+                                                                                        {
+                                                                                            "score": 1000.1833087365328,
+                                                                                            "desc": "",
+                                                                                            "childResults": [],
+                                                                                            "ruleName": "蜜罐近1个月查询次数",
+                                                                                            "ruleId": 44,
+                                                                                            "type": 0,
+                                                                                            "extendType": 0
+                                                                                        }
+                                                                                    ],
+                                                                                    "ruleName": "1个月内查询次数[e](copy142 => 386)",
+                                                                                    "ruleId": 386,
+                                                                                    "type": 1,
+                                                                                    "extendType": 1
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "机构查询次数[e](copy143 => 379)",
+                                                                            "ruleId": 379,
+                                                                            "type": 1,
+                                                                            "extendType": 0
+                                                                        }
+                                                                    ],
+                                                                    "ruleName": "蜜罐[e](copy144 => 369)",
+                                                                    "ruleId": 369,
+                                                                    "type": 1,
+                                                                    "extendType": 0
+                                                                },
+                                                                {
+                                                                    "score": 100.52100954210516,
+                                                                    "desc": "expression:@380 * 0.4 + @381 * 0.6",
+                                                                    "childResults": [
+                                                                        {
+                                                                            "score": 10.548959586376727,
+                                                                            "desc": " expresssion: @45>=5 && @45 <= 10000, result: 100; expresssion: @45 >=3 && @45 <=5, result: 50; expresssion: @45 >= -1 && @45 <=3, result: 0;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1000.002688999654,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "主叫贷款类号码联系情况",
+                                                                                    "ruleId": 45,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "贷款类号码主叫个数[e](copy145 => 380)",
+                                                                            "ruleId": 380,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.450521620057133,
+                                                                            "desc": " expresssion: @46 >= 3 , result: 100; expresssion: @46 >= 1, result: 50; expresssion: @46 >= -1, result: 0;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1003.4690295673344,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "被叫贷款类号码联系情况",
+                                                                                    "ruleId": 46,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "贷款类号码被叫个数[e](copy146 => 381)",
+                                                                            "ruleId": 381,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        }
+                                                                    ],
+                                                                    "ruleName": "聚信立[e](copy147 => 370)",
+                                                                    "ruleId": 370,
+                                                                    "type": 1,
+                                                                    "extendType": 0
+                                                                }
+                                                            ],
+                                                            "ruleName": "行为记录[e](copy150 => 367)",
+                                                            "ruleId": 367,
+                                                            "type": 1,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "通讯录有效号码数量额度(copy311 => 358)",
+                                                    "ruleId": 358,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.07881003257975,
+                                                    "desc": " expresssion: @49 < 50, result: 0; expresssion: @49 < 100, result: 50; expresssion: @49 < 200, result: 100; expresssion: @49 >= 200, result: 200;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1002.8929757771942,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "月均话费",
+                                                            "ruleId": 49,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "近6个月话费平均使用情况额度(copy312 => 359)",
+                                                    "ruleId": 359,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.948852542310235,
+                                                    "desc": " expresssion: @35 > 0 && @35 <= 5, result: 100; expresssion: @35 > 5 && @35 <= 20, result: 50; expresssion: @35 > 20 && @35 <= 50, result: 30;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1002.4507149711746,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "第一联系人通话排名",
+                                                            "ruleId": 35,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "第一联系人通话时间排名额度(copy313 => 360)",
+                                                    "ruleId": 360,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                }
+                                            ],
+                                            "ruleName": "白卡额度策略(copy315 => 350)",
+                                            "ruleId": 350,
+                                            "type": 1,
+                                            "extendType": 1
+                                        }
+                                    ],
+                                    "ruleName": "基础额度策略",
+                                    "ruleId": 394,
+                                    "type": 1,
+                                    "extendType": 1
+                                },
+                                {
+                                    "score": 10.291225498316408,
+                                    "desc": " expresssion: @605 < 9, result: 0; expresssion: @605 >= 9 && @606 < 100 && @606  >= 50, result: 200; expresssion: @605 >= 9 && @606 >= 100 && @606 < 200, result: 400; expresssion: @605 >= 9 && @606 >= 200 && @606 < 300, result: 600; expresssion: @605 >= 9 && @606 >= 300 && @606 < 400, result: 1000; expresssion: @605 >=  10 && @606 >= 400 && @606 < 500, result: 1400; expresssion: @605 >= 10 && @606 >= 500 && @606 < 600, result: 1600; expresssion: @605 >= 10 && @606 >= 600 && @606 < 700, result: 1800; expresssion: @605 >= 11 && @606 >= 700 && @606 < 800, result: 2200; expresssion: @605 >= 11 && @606 >= 800 && @606 < 1000, result: 2400; expresssion: @605 >= 11 && @606 >= 1000 && @606 < 1200, result: 2800; expresssion: @605 >= 11 && @606 >= 1200 && @606 < 1400, result: 3000; expresssion: @605 >= 11 && @606 >= 1400 && @606 < 1600, result: 3400; expresssion: @605 >= 11 && @606 >= 1600 && @606 < 1800, result: 3600; expresssion: @605 >= 11 && @606 >= 1800 && @606 < 2000, result: 3800; expresssion: @605 >= 11 && @606 >= 2000, result: 4000;",
+                                    "childResults": [
+                                        {
+                                            "score": 1000.0960947576581,
+                                            "desc": "",
+                                            "childResults": [],
+                                            "ruleName": "公积金数据-最近一年缴纳月数",
+                                            "ruleId": 605,
+                                            "type": 0,
+                                            "extendType": 0
+                                        },
+                                        {
+                                            "score": 1001.4591200669071,
+                                            "desc": "",
+                                            "childResults": [],
+                                            "ruleName": "公积金数据-最近一年缴纳平均金额",
+                                            "ruleId": 606,
+                                            "type": 0,
+                                            "extendType": 0
+                                        }
+                                    ],
+                                    "ruleName": "公积金数据提额",
+                                    "ruleId": 607,
+                                    "type": 1,
+                                    "extendType": 1
+                                },
+                                {
+                                    "score": 1001.3492618482838,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "用户还款所增加的额度",
+                                    "ruleId": 203,
+                                    "type": 0,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 100.66331946325107,
+                                    "desc": "expression:@397>0 ? 0 : (@403 > 0 ? ((@78 > 0 && @76 ==1) ?((@78 > 1000 ? 1000: @78) + @403 + @203) : (@403 + @203)) : @403)",
+                                    "childResults": [
+                                        {
+                                            "score": 10.356457595532474,
+                                            "desc": " expresssion: @64 == 2, result: 1; expresssion: @65 == 2, result: 1; expresssion: @68 == 2, result: 1; expresssion: @73 == 2, result: 1; expresssion: @485 == 1, result: 1; expresssion: @387 == 2 , result: 1; expresssion: @75 == 2, result: 1; expresssion: @23 == 2, result: 1; expresssion: @24 == 2, result: 1; expresssion: @387 == 2 , result: 1; expresssion: @610 == 1, result: 1;",
+                                            "childResults": [
+                                                {
+                                                    "score": 1000.6265458609855,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "芝麻信用行业关注名单逾期未处理",
+                                                    "ruleId": 64,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1001.9651765412527,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "芝麻信用行业关注名单黑名单",
+                                                    "ruleId": 65,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1000.2149548487803,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "蜜罐黑名单",
+                                                    "ruleId": 68,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1003.9455847979352,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "白骑士反欺诈风险名单",
+                                                    "ruleId": 73,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1001.2789572583713,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "极速钱包黑名单",
+                                                    "ruleId": 485,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1000.8921178247377,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "百融特殊名单",
+                                                    "ruleId": 387,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1003.7714771599345,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "同盾其他黑名单",
+                                                    "ruleId": 75,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1002.7798859521715,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "同盾手机网贷黑名单",
+                                                    "ruleId": 23,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1000.9806277867093,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "同盾身份证网贷黑名单",
+                                                    "ruleId": 24,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 1003.8609357925698,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "信用白条黑名单",
+                                                    "ruleId": 610,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                }
+                                            ],
+                                            "ruleName": "信用白条禁止项",
+                                            "ruleId": 397,
+                                            "type": 1,
+                                            "extendType": 1
+                                        },
+                                        {
+                                            "score": 10.422184907431596,
+                                            "desc": " expresssion: @414  < 10, result: -1; expresssion: @414 >= 30, result: 1000;",
+                                            "childResults": [
+                                                {
+                                                    "score": 100.56460532889668,
+                                                    "desc": "expression:0.25 * @422 + 0.2 * @423 + 0.05 * @424 + 0.5 * @425",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 100.88413635526732,
+                                                            "desc": "expression:0.4 * @434 + 0.2 * @435 + 0.4 * @174",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 10.721313237556185,
+                                                                    "desc": " expresssion: @11 >= 0 && @11 <= 18, result: 0; expresssion: @11 >= 19 && @11 <= 30, result: 100; expresssion: @11 >= 31 && @11 <= 50, result: 50;",
+                                                                    "childResults": [
+                                                                        {
+                                                                            "score": 1002.4851804895123,
+                                                                            "desc": "",
+                                                                            "childResults": [],
+                                                                            "ruleName": "年龄（身份证）",
+                                                                            "ruleId": 11,
+                                                                            "type": 0,
+                                                                            "extendType": 0
+                                                                        }
+                                                                    ],
+                                                                    "ruleName": "年龄[e](copy167 => 434)",
+                                                                    "ruleId": 434,
+                                                                    "type": 1,
+                                                                    "extendType": 1
+                                                                },
+                                                                {
+                                                                    "score": 10.317770658052487,
+                                                                    "desc": " expresssion: @31== 1, result: 0; expresssion: @31 == 2, result: 100;",
+                                                                    "childResults": [
+                                                                        {
+                                                                            "score": 1003.3488136807232,
+                                                                            "desc": "",
+                                                                            "childResults": [],
+                                                                            "ruleName": "性别（身份证）",
+                                                                            "ruleId": 31,
+                                                                            "type": 0,
+                                                                            "extendType": 0
+                                                                        }
+                                                                    ],
+                                                                    "ruleName": "性别[e](copy168 => 435)",
+                                                                    "ruleId": 435,
+                                                                    "type": 1,
+                                                                    "extendType": 1
+                                                                },
+                                                                {
+                                                                    "score": 1003.3205857430446,
+                                                                    "desc": "",
+                                                                    "childResults": [],
+                                                                    "ruleName": "户籍所在城市[e]",
+                                                                    "ruleId": 174,
+                                                                    "type": 0,
+                                                                    "extendType": 1
+                                                                }
+                                                            ],
+                                                            "ruleName": "个人情况[e](copy175 => 422)",
+                                                            "ruleId": 422,
+                                                            "type": 1,
+                                                            "extendType": 0
+                                                        },
+                                                        {
+                                                            "score": 100.11627365103611,
+                                                            "desc": "expression:@438",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 100.17238926708107,
+                                                                    "desc": "expression:0.1*@463+0.1*@464+0.1*@465+0.05*@466+0.05*@467+0.1*@468+0.1*@469+0.1*@470+0.1*@471+0.1*@472+0.1*@473",
+                                                                    "childResults": [
+                                                                        {
+                                                                            "score": 10.556449781008618,
+                                                                            "desc": " expresssion: @14 >=0 && @14 <= 20, result: 0; expresssion: @14 >= 21 && @14 <= 50, result: 50; expresssion: @14 >=51 && @14 <= 10000, result: 100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1003.0491942958392,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "判断通讯录手机号数量",
+                                                                                    "ruleId": 14,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "通讯录有效号码数[e](copy176 => 463)",
+                                                                            "ruleId": 463,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.758131506597367,
+                                                                            "desc": " expresssion: @7 >= 0 && @7 <= 20, result: 0; expresssion: @7 >= 21 && @7 <=50, result: 50; expresssion: @7 >= 51 && @7 <= 10000, result: 100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1003.4227543737395,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "互通过电话的号码数量检验",
+                                                                                    "ruleId": 7,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "互通过电话的号码数[e](copy177 => 464)",
+                                                                            "ruleId": 464,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.516134789518667,
+                                                                            "desc": " expresssion: @40 >= 0 && @40 <= 30, result: 100; expresssion: @40 >= 30 && @40 <= 90, result: 50; expresssion: @40 >= 90 && @40 <= 10000, result: 0;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1003.2390625955248,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "第二联系人最晚沟通时间",
+                                                                                    "ruleId": 40,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "与第二联系人最晚沟通时间[e](copy178 => 465)",
+                                                                            "ruleId": 465,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.683243457638481,
+                                                                            "desc": " expresssion: @38 >= 0 && @38 <= 10, result: 0; expresssion: @38 >= 11 && @38 <=20, result: 50; expresssion: @38 >= 21 && @38 <= 10000, result: 100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1001.6726145993937,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "第二联系人通话次数",
+                                                                                    "ruleId": 38,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "与第二联系人互通电话次数[e](copy179 => 466)",
+                                                                            "ruleId": 466,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.88284413427394,
+                                                                            "desc": " expresssion: @36 >=1 && @36 <= 30, result: 100; expresssion: @36 >= 31 && @36 <= 100, result: 50; expresssion: @36 >= 101 && @36 <= 10000, result: 0;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1002.6610481212224,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "第二联系人通话排名",
+                                                                                    "ruleId": 36,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "与第二联系人互动排名[e](copy180 => 467)",
+                                                                            "ruleId": 467,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.842350796008901,
+                                                                            "desc": " expresssion: @39 >= 0 && @ 39 <=30, result: 100; expresssion: @39 >= 30 && @39 <= 90, result: 50; expresssion: @39 >= 90 && @39 <=10000, result: 0;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1003.06320662105,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "第一联系人最晚沟通时间",
+                                                                                    "ruleId": 39,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                },
+                                                                                {
+                                                                                    "score": 0,
+                                                                                    "desc": "not found ruleid"
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "与亲属联系人最晚沟通时间[e](copy181 => 468)",
+                                                                            "ruleId": 468,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.801304075212482,
+                                                                            "desc": " expresssion: @37 >= 0 && @37 <=10, result: 0; expresssion: @37 >= 11 && @37 <=30, result: 50; expresssion: @37 >= 31 && @37 <= 10000, result: 100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1000.0129880644655,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "第一联系人通话次数",
+                                                                                    "ruleId": 37,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "与亲属联系人互通电话次数[e](copy182 => 469)",
+                                                                            "ruleId": 469,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.856529671586072,
+                                                                            "desc": " expresssion: @35 >= 1 && @35 <= 10, result: 100; expresssion: @35 >= 11 && @35 <= 20, result: 50; expresssion: @35 >= 21 && @35 <= 10000, result: 0;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1002.4507149711746,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "第一联系人通话排名",
+                                                                                    "ruleId": 35,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "与亲属联系人互动排名[e](copy183 => 470)",
+                                                                            "ruleId": 470,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.553064612843263,
+                                                                            "desc": " expresssion: @5 == 1, result: 0; expresssion: @5 == 2, result: 100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1002.8828425450779,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "澳门通话",
+                                                                                    "ruleId": 5,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "澳门通话[e](copy184 => 471)",
+                                                                            "ruleId": 471,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.894318365956536,
+                                                                            "desc": " expresssion: @8 >= 0 && @8 <= 2, result: 100; expresssion: @8 >= 3 && @8 <= 5, result: 50; expresssion: @8 >= 6 && @8 <= 100, result: 0;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1000.6983793354943,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "关机情况检验",
+                                                                                    "ruleId": 8,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "连续关机天数[e](copy185 => 472)",
+                                                                            "ruleId": 472,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        },
+                                                                        {
+                                                                            "score": 10.087101693408012,
+                                                                            "desc": " expresssion: @2 >= 0 && @2 <= 6, result: 0; expresssion: @2 >= 6 && @2 <= 12, result: 50; expresssion: @2 >= 12 && @2 <= 10000, result: 100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1000.3227327746322,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "实名时间限制规则",
+                                                                                    "ruleId": 2,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "实名使用时间[e](copy186 => 473)",
+                                                                            "ruleId": 473,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        }
+                                                                    ],
+                                                                    "ruleName": "手机-稳定性(copy187 => 438)",
+                                                                    "ruleId": 438,
+                                                                    "type": 1,
+                                                                    "extendType": 0
+                                                                }
+                                                            ],
+                                                            "ruleName": "稳定性(copy188 => 423)",
+                                                            "ruleId": 423,
+                                                            "type": 1,
+                                                            "extendType": 0
+                                                        },
+                                                        {
+                                                            "score": 100.99943157236753,
+                                                            "desc": "expression:@439",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 100.91868815400319,
+                                                                    "desc": "expression:@474",
+                                                                    "childResults": [
+                                                                        {
+                                                                            "score": 10.598010489337769,
+                                                                            "desc": " expresssion: @49 >= 0 && @49 <= 50, result: 0; expresssion: @49 >= 50 && @49 <= 100, result: 50; expresssion: @49 >= 100 && @49 <= 100000, result: 100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1002.8929757771942,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "月均话费",
+                                                                                    "ruleId": 49,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "近6个月月均话费(copy189 => 474)",
+                                                                            "ruleId": 474,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        }
+                                                                    ],
+                                                                    "ruleName": "手机-消费能力(copy190 => 439)",
+                                                                    "ruleId": 439,
+                                                                    "type": 1,
+                                                                    "extendType": 0
+                                                                }
+                                                            ],
+                                                            "ruleName": "消费能力(copy191 => 424)",
+                                                            "ruleId": 424,
+                                                            "type": 1,
+                                                            "extendType": 0
+                                                        },
+                                                        {
+                                                            "score": 100.537050710824,
+                                                            "desc": "expression:0.3 * @441 + 0.7 * @443",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 100.24768186039732,
+                                                                    "desc": "expression:@476",
+                                                                    "childResults": [
+                                                                        {
+                                                                            "score": 10.69253889132343,
+                                                                            "desc": " expresssion: @51 == 1, result: 100; expresssion: @51 == 2 || @51 == 3 || @51 == 4 || @51 == 5 || @51 == 6 || @51 == 7 || @51 == 8 || @51 ==9, result: 0; expresssion: @51 == 10 || @51 == 11, result: -50; expresssion: @51 == 12 || @51 == 13 || @51 == 14 || @51 == 15 || @51 == 16, result: -100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1002.5527524954308,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "芝麻历史逾期情况",
+                                                                                    "ruleId": 51,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "历史逾期情况-芝麻信用(copy197 => 476)",
+                                                                            "ruleId": 476,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        }
+                                                                    ],
+                                                                    "ruleName": "芝麻信用(copy198 => 441)",
+                                                                    "ruleId": 441,
+                                                                    "type": 1,
+                                                                    "extendType": 0
+                                                                },
+                                                                {
+                                                                    "score": 100.22811551114549,
+                                                                    "desc": "expression:@478",
+                                                                    "childResults": [
+                                                                        {
+                                                                            "score": 10.837430310987196,
+                                                                            "desc": " expresssion: @48 == 1, result: 100; expresssion: @48 == 2, result: 80; expresssion: @48 == 3, result: 50; expresssion: @48 == 4 || @48 == 5 || @48 == 6, result: 20; expresssion: @48 == 7 || @48 == 8 || @48 == 9, result: 0; expresssion: @48 == 10 || @48 == 11 || @48 == 12 || @48 == 13 || @48 == 14, result: -50; expresssion: @48 == 15 || @48 == 7, result: -100;",
+                                                                            "childResults": [
+                                                                                {
+                                                                                    "score": 1001.8603693177135,
+                                                                                    "desc": "",
+                                                                                    "childResults": [],
+                                                                                    "ruleName": "后台还款记录",
+                                                                                    "ruleId": 48,
+                                                                                    "type": 0,
+                                                                                    "extendType": 0
+                                                                                }
+                                                                            ],
+                                                                            "ruleName": "还款记录(copy199 => 478)",
+                                                                            "ruleId": 478,
+                                                                            "type": 1,
+                                                                            "extendType": 1
+                                                                        }
+                                                                    ],
+                                                                    "ruleName": "后台(copy200 => 443)",
+                                                                    "ruleId": 443,
+                                                                    "type": 1,
+                                                                    "extendType": 0
+                                                                }
+                                                            ],
+                                                            "ruleName": "信用记录(copy201 => 425)",
+                                                            "ruleId": 425,
+                                                            "type": 1,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "信用评分[e](copy166 => 414)",
+                                                    "ruleId": 414,
+                                                    "type": 1,
+                                                    "extendType": 0
+                                                }
+                                            ],
+                                            "ruleName": "信用额度(copy209 => 403)",
+                                            "ruleId": 403,
+                                            "type": 1,
+                                            "extendType": 1
+                                        },
+                                        {
+                                            "score": 1001.4604676761551,
+                                            "desc": "",
+                                            "childResults": [],
+                                            "ruleName": "支付宝花呗额度",
+                                            "ruleId": 78,
+                                            "type": 0,
+                                            "extendType": 0
+                                        },
+                                        {
+                                            "score": 1002.0879726592294,
+                                            "desc": "",
+                                            "childResults": [],
+                                            "ruleName": "支付宝实名认证规则",
+                                            "ruleId": 76,
+                                            "type": 0,
+                                            "extendType": 0
+                                        },
+                                        {
+                                            "score": 1001.3492618482838,
+                                            "desc": "",
+                                            "childResults": [],
+                                            "ruleName": "用户还款所增加的额度",
+                                            "ruleId": 203,
+                                            "type": 0,
+                                            "extendType": 0
+                                        }
+                                    ],
+                                    "ruleName": "用户借款额度(copy210 => 395)",
+                                    "ruleId": 395,
+                                    "type": 1,
+                                    "extendType": 0
+                                }
+                            ],
+                            "ruleName": "最大授信额度(copy319 => 391)",
+                            "ruleId": 391,
+                            "type": 1,
+                            "extendType": 1
+                        },
+                        {
+                            "score": 1002.982651261002,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "用户借款总金额",
+                            "ruleId": 211,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.1046924376878,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "用户是否是老用户",
+                            "ruleId": 204,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 100.69237803736686,
+                            "desc": "expression:0.6 * @415 + 0.4 * @416",
+                            "childResults": [
+                                {
+                                    "score": 100.2298901503176,
+                                    "desc": "expression:@139*0.5+0.1* @427 + 0.1* @428",
+                                    "childResults": [
+                                        {
+                                            "score": 100.85939377435147,
+                                            "desc": "expression:@133 * 0.1 + @134 * 0.15 + @135 * 0.2 + @136 * 0.2 + @137 * 0.2 + @138 * 0.15",
+                                            "childResults": [
+                                                {
+                                                    "score": 100.94621018382541,
+                                                    "desc": "expression:@131 * 0.6 + @132 * 0.4",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 10.686627826339393,
+                                                            "desc": " expresssion: @27 < 5 && @27 >= 0, result: 0; expresssion: @27 < 10, result: 50;",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 1000.0779275492522,
+                                                                    "desc": "",
+                                                                    "childResults": [],
+                                                                    "ruleName": "7天内申请人在多个平台申请借款",
+                                                                    "ruleId": 27,
+                                                                    "type": 0,
+                                                                    "extendType": 0
+                                                                }
+                                                            ],
+                                                            "ruleName": "7天内多平台借贷总数[e]",
+                                                            "ruleId": 131,
+                                                            "type": 1,
+                                                            "extendType": 1
+                                                        },
+                                                        {
+                                                            "score": 10.4920069663854,
+                                                            "desc": " expresssion: @26 < 10 && @26 >= 0, result: 0; expresssion: @26 < 20, result: 50;",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 1002.7583366317921,
+                                                                    "desc": "",
+                                                                    "childResults": [],
+                                                                    "ruleName": "1个月内申请人在多个平台申请借款",
+                                                                    "ruleId": 26,
+                                                                    "type": 0,
+                                                                    "extendType": 0
+                                                                }
+                                                            ],
+                                                            "ruleName": "1个月内多平台借贷总数[e]",
+                                                            "ruleId": 132,
+                                                            "type": 1,
+                                                            "extendType": 1
+                                                        }
+                                                    ],
+                                                    "ruleName": "多平台申请借款[e]",
+                                                    "ruleId": 133,
+                                                    "type": 1,
+                                                    "extendType": 0
+                                                },
+                                                {
+                                                    "score": 10.087507883346634,
+                                                    "desc": " expresssion: @58 >= 0 && @58 <= 2, result: 0; expresssion: @58 <= 4, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1001.5769736185505,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "3个月内身份证关联多个申请信息",
+                                                            "ruleId": 58,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "3个月内身份证关联多个申请信息[e]",
+                                                    "ruleId": 134,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.37466295666152,
+                                                    "desc": " expresssion: @57 >= 0 && @57 <= 2, result: 0; expresssion: @57 <= 4, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1000.3066198966635,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "3个月内申请信息关联多个身份证",
+                                                            "ruleId": 57,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "3个月内申请信息关联多个身份证[e]",
+                                                    "ruleId": 135,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.516662387731174,
+                                                    "desc": " expresssion: @55 >= 0 && @55 <= 1, result: 0; expresssion: @55 <= 3, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1002.458740317581,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "7天内设备使用过多的身份证或手机号进行申请",
+                                                            "ruleId": 55,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "7天内设备使用过多的身份证或手机号进行申请[e]",
+                                                    "ruleId": 136,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.50468002713908,
+                                                    "desc": " expresssion: @56 >= 0 && @56 <= 2, result: 0; expresssion: @56 <= 4, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1000.948228129136,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "7天内身份证关联设备数",
+                                                            "ruleId": 56,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "7天内身份证使用过多设备进行申请[e]",
+                                                    "ruleId": 137,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.945392593530732,
+                                                    "desc": " expresssion: @54 >= 0 && @54 <= 2, result: 0; expresssion: @54 <= 4, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1002.4201914560097,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "1个月内身份证使用过多设备进行申请",
+                                                            "ruleId": 54,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "1个月内身份证使用过多设备进行申请[e]",
+                                                    "ruleId": 138,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                }
+                                            ],
+                                            "ruleName": "同盾[e]",
+                                            "ruleId": 139,
+                                            "type": 1,
+                                            "extendType": 0
+                                        },
+                                        {
+                                            "score": 100.09412317179829,
+                                            "desc": "expression:@450 * 0.5 + @451 * 0.5",
+                                            "childResults": [
+                                                {
+                                                    "score": 10.223043554865443,
+                                                    "desc": " expresssion: @42 >= 0 && @42 <=5, result: 100; expresssion: @42<=10 && @42 > 5, result: 50; expresssion: @42<=100, result: 0;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1002.8938306981529,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "蜜罐黑中介分",
+                                                            "ruleId": 42,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "黑中介分[e](copy140 => 450)",
+                                                    "ruleId": 450,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 100.2049170467367,
+                                                    "desc": "expression:@481 * 0.5 + @482 * 0.5",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 10.444690873160328,
+                                                            "desc": " expresssion: @43 >=0 && @43 < 5, result: 0; expresssion: @43 < 10, result: 50;",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 1000.3080258130144,
+                                                                    "desc": "",
+                                                                    "childResults": [],
+                                                                    "ruleName": "蜜罐近7天查询次数",
+                                                                    "ruleId": 43,
+                                                                    "type": 0,
+                                                                    "extendType": 0
+                                                                }
+                                                            ],
+                                                            "ruleName": "7天内查询次数[e](copy141 => 481)",
+                                                            "ruleId": 481,
+                                                            "type": 1,
+                                                            "extendType": 1
+                                                        },
+                                                        {
+                                                            "score": 10.439562779319916,
+                                                            "desc": " expresssion: @44 >= 0 && @44 < 10, result: 0; expresssion: @44 < 15, result: 50;",
+                                                            "childResults": [
+                                                                {
+                                                                    "score": 1000.1833087365328,
+                                                                    "desc": "",
+                                                                    "childResults": [],
+                                                                    "ruleName": "蜜罐近1个月查询次数",
+                                                                    "ruleId": 44,
+                                                                    "type": 0,
+                                                                    "extendType": 0
+                                                                }
+                                                            ],
+                                                            "ruleName": "1个月内查询次数[e](copy142 => 482)",
+                                                            "ruleId": 482,
+                                                            "type": 1,
+                                                            "extendType": 1
+                                                        }
+                                                    ],
+                                                    "ruleName": "机构查询次数[e](copy143 => 451)",
+                                                    "ruleId": 451,
+                                                    "type": 1,
+                                                    "extendType": 0
+                                                }
+                                            ],
+                                            "ruleName": "蜜罐[e](copy144 => 427)",
+                                            "ruleId": 427,
+                                            "type": 1,
+                                            "extendType": 0
+                                        },
+                                        {
+                                            "score": 100.60835956315391,
+                                            "desc": "expression:@452 * 0.4 + @453 * 0.6",
+                                            "childResults": [
+                                                {
+                                                    "score": 10.708393891312648,
+                                                    "desc": " expresssion: @45>=5 && @45 <= 10000, result: 100; expresssion: @45 >=3 && @45 <=5, result: 50; expresssion: @45 >= -1 && @45 <=3, result: 0;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1000.002688999654,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "主叫贷款类号码联系情况",
+                                                            "ruleId": 45,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "贷款类号码主叫个数[e](copy145 => 452)",
+                                                    "ruleId": 452,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.739805502831553,
+                                                    "desc": " expresssion: @46 >= 3 , result: 100; expresssion: @46 >= 1, result: 50; expresssion: @46 >= -1, result: 0;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1003.4690295673344,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "被叫贷款类号码联系情况",
+                                                            "ruleId": 46,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "贷款类号码被叫个数[e](copy146 => 453)",
+                                                    "ruleId": 453,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                }
+                                            ],
+                                            "ruleName": "聚信立[e](copy147 => 428)",
+                                            "ruleId": 428,
+                                            "type": 1,
+                                            "extendType": 0
+                                        }
+                                    ],
+                                    "ruleName": "行为记录[e](copy150 => 415)",
+                                    "ruleId": 415,
+                                    "type": 1,
+                                    "extendType": 0
+                                },
+                                {
+                                    "score": 100.81341070064609,
+                                    "desc": "expression:0.3 * @430 + 0.2 * @431 + 0.2 * @432 + 0.3*@433",
+                                    "childResults": [
+                                        {
+                                            "score": 100.98917106222596,
+                                            "desc": "expression:0.3 * @455 +  0.4 * @456",
+                                            "childResults": [
+                                                {
+                                                    "score": 10.84110389790002,
+                                                    "desc": " expresssion: @16>=1, result: 100; expresssion: @16 >= 0 && @16 <= 1, result: 0;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1001.6651621070428,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "常住地址出现次数",
+                                                            "ruleId": 16,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "常住地址重复[e](copy151 => 455)",
+                                                    "ruleId": 455,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.053336597495413,
+                                                    "desc": " expresssion: @18 >= 5, result: 100; expresssion: @18 >= 3 && @18 < 5, result: 50; expresssion: @18 >= 0 && @18 < 3, result: 0;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1000.9394311637774,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "公司地址出现次数",
+                                                            "ruleId": 18,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "单位地址重复[e](copy152 => 456)",
+                                                    "ruleId": 456,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                }
+                                            ],
+                                            "ruleName": "地址聚类[e](copy160 => 430)",
+                                            "ruleId": 430,
+                                            "type": 1,
+                                            "extendType": 0
+                                        },
+                                        {
+                                            "score": 100.7658847148043,
+                                            "desc": "expression:0.5 * @457 + 0.5 * @458",
+                                            "childResults": [
+                                                {
+                                                    "score": 10.201493208660674,
+                                                    "desc": " expresssion: @15 >= 0 && @15 <= 1, result: 0; expresssion: @15 == 2, result: 100; expresssion: @15 >= 3, result: 200;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1003.047271451117,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "设备曾用手机号",
+                                                            "ruleId": 15,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "一个设备使用多个手机号注册[e](copy153 => 457)",
+                                                    "ruleId": 457,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.28735311201315,
+                                                    "desc": " expresssion: @13 >= 0 && @13 <= 1, result: 0; expresssion: @13 == 2, result: 50; expresssion: @13 >= 3, result: 100;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1001.2409164858376,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "判断设备数量",
+                                                            "ruleId": 13,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "一个手机号登录多个设备注册[e](copy154 => 458)",
+                                                    "ruleId": 458,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                }
+                                            ],
+                                            "ruleName": "设备聚类[e](copy161 => 431)",
+                                            "ruleId": 431,
+                                            "type": 1,
+                                            "extendType": 0
+                                        },
+                                        {
+                                            "score": 100.82666191547207,
+                                            "desc": "expression:0.3 * @459 + 0.3 * @460 + 0.2 * @461 + 0.2 * @462",
+                                            "childResults": [
+                                                {
+                                                    "score": 10.009802961474609,
+                                                    "desc": " expresssion: @17 >= 0 && @17<=2, result: 0; expresssion: @17 >= 3 && @17 <= 4, result: 50; expresssion: @17 >= 5, result: 100;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1002.3357137822468,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "公司名出现次数",
+                                                            "ruleId": 17,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "单位名称重复[e](copy155 => 459)",
+                                                    "ruleId": 459,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.429417794339802,
+                                                    "desc": " expresssion: @59 >= 0 &&  @59 <=1, result: 0; expresssion: @59 == 2, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1002.934960114673,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "一个单位电话关联多个单位名称或地址",
+                                                            "ruleId": 59,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "一个单位电话关联多个单位名称或地址[e](copy156 => 460)",
+                                                    "ruleId": 460,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.025969792417408,
+                                                    "desc": " expresssion: @60 >= 0 && @60 <= 1, result: 0; expresssion: @60 == 2, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1000.510460135101,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "一个单位地址关联多个单位电话或名称",
+                                                            "ruleId": 60,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "一个单位地址关联多个单位电话或名称[e](copy157 => 461)",
+                                                    "ruleId": 461,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                },
+                                                {
+                                                    "score": 10.74038763723546,
+                                                    "desc": " expresssion: @61>=0 && @61 <= 1, result: 0; expresssion: @61 == 2, result: 50;",
+                                                    "childResults": [
+                                                        {
+                                                            "score": 1001.8724697561612,
+                                                            "desc": "",
+                                                            "childResults": [],
+                                                            "ruleName": "一个单位名称关联多个单位电话或地址",
+                                                            "ruleId": 61,
+                                                            "type": 0,
+                                                            "extendType": 0
+                                                        }
+                                                    ],
+                                                    "ruleName": "一个单位名称关联多个单位电话或地址[e](copy158 => 462)",
+                                                    "ruleId": 462,
+                                                    "type": 1,
+                                                    "extendType": 1
+                                                }
+                                            ],
+                                            "ruleName": "单位聚类[e](copy162 => 432)",
+                                            "ruleId": 432,
+                                            "type": 1,
+                                            "extendType": 0
+                                        },
+                                        {
+                                            "score": 10.049290465388243,
+                                            "desc": " expresssion: @224 >= 0 && @224 <= 2, result: 0; expresssion: @224 >= 3 && @224 <= 4, result: 50;",
+                                            "childResults": [
+                                                {
+                                                    "score": 1001.0969620953656,
+                                                    "desc": "",
+                                                    "childResults": [],
+                                                    "ruleName": "直接联系人申请人数",
+                                                    "ruleId": 224,
+                                                    "type": 0,
+                                                    "extendType": 0
+                                                }
+                                            ],
+                                            "ruleName": "直接联系人申请人数[e](copy225 => 433)",
+                                            "ruleId": 433,
+                                            "type": 1,
+                                            "extendType": 1
+                                        }
+                                    ],
+                                    "ruleName": "团体欺诈[e](copy163 => 416)",
+                                    "ruleId": 416,
+                                    "type": 1,
+                                    "extendType": 0
+                                }
+                            ],
+                            "ruleName": "反欺诈[e](copy164 => 404)",
+                            "ruleId": 404,
+                            "type": 1,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.5792908341015,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "人脸识别分",
+                            "ruleId": 261,
+                            "type": 0,
+                            "extendType": 0
+                        }
+                    ],
+                    "ruleName": "决策树A[e](copy202 => 398)",
+                    "ruleId": 398,
+                    "type": 1,
+                    "extendType": 1
+                },
+                {
+                    "score": 10.511799768914674,
+                    "desc": " expresssion: @264 >= 2, result: [\"interval\"=>0,\"head_code\"=>\"D2\",\"back_code\"=>\"25\",\"txt\"=>\"已存在1笔借款中的订单\"]; expresssion: @204 == 1 && @205 == 0, result: [\"interval\"=>3,\"head_code\"=>\"D2\",\"back_code\"=>\"11\",\"txt\"=>\"老用户催收建议拒绝\"]; expresssion: @206 >= 10, result: [\"interval\"=>3, \"head_code\"=>\"D2\", \"back_code\"=>\"12\",\"txt\"=>\"历史借款订单逾期大于等于10天\"]; expresssion: @204 == 0 && (@11 < 20 || @11 > 37) , result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"01\",\"txt\"=>\"新用户借款年龄小于20或者大于37\"]; expresssion: @501 == 1 && @204 == 0 && @14 <= 30, result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=> \"09\",\"txt\"=>\"新用户通讯录手机号数量<=30\"]; expresssion: @204 == 0 && @7 <= 20 , result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=> \"09\",\"txt\"=>\"新用户手机互通过电话的号码小于等于20\"]; expresssion: @204 == 0 && @1 == 2, result: [\"interval\"=>1,\"head_code\"=> \"D2\",\"back_code\"=>\"02\",\"txt\"=>\"新用户手机运营商未实名\"]; expresssion: @8 > 5, result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"22\",\"txt\"=>\"连续关机天数>5\"]; expresssion: @48 == 15, result: [\"interval\"=>1,\"head_code\"=> \"D2\",\"back_code\"=>\"18\",\"txt\"=>\"后台历史还款逾期10天以上\"]; expresssion: @7 < 5, result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"19\",\"txt\"=>\"互通过的电话数量小于5个\"]; expresssion: @49 < 10 , result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"23\",\"txt\"=>\"月均话费小于10元\"]; expresssion: @261 > 0 && @261 < 50, result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"21\",\"txt\"=>\"人脸识别分低于50\"]; expresssion: @38 <= 0 && @37 <= 0 && @8 > 5, result: [\"interval\"=>0,\"head_code\"=>\"D2\",\"back_code\"=>\"20\",\"txt\"=>\"第一，第二联系人都没有过联系，且关机时间大于5\"]; expresssion: @204 == 0 && @207 < 3, result: [\"interval\"=>0, \"head_code\"=>\"D2\", \"back_code\"=>\"13\",\"txt\"=>\"新用户照片数量<3\"]; expresssion: @263 >= 2, result: [\"interval\"=>0,\"head_code\"=>\"D2\",\"back_code\"=>\"24\",\"txt\"=>\"7天内提前还款2次及以上\"]; expresssion: @54 > 4, result: [\"interval\"=>0, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"1个月内身份证使用设备进行申请大于4\"]; expresssion: @55 > 3, result: [\"interval\"=>0, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"7天内设备使用身份证或手机号申请大于3\"]; expresssion: @56 > 4 , result: [\"interval\"=>0, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"7天内身份证关联设备数大于4\"]; expresssion: @42 < 10, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"蜜罐黑中介分小于10\"]; expresssion: @2 <= 6, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"手机运营商实名时间<=6个月\"]; expresssion: @35 == -1 && @36 == -1, result: [\"interval\"=>0, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"第一，第二联系人都没有过联系\"]; expresssion: @320 < 20, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"通讯录有效号码数量小于20\"]; expresssion: @248 > 10, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"历史最大逾期天数>10\"]; expresssion: @15 >=2, result: [\"interval\"=>1,\"head_code\"=>\"D1\",\"back_code\"=>\"11\",\"txt\"=>\"设备曾用手机号>2\"]\t; expresssion: @612 == 1 , result: [\"interval\"=>3,\"head_code\"=>\"D2\",\"back_code\"=>\"26\",\"txt\"=>\"注册号码与第一、第二联系人存在相同项\"]; expresssion: @613 < 18, result: [\"interval\"=>3,\"head_code\"=>\"D2\",\"back_code\"=> \"27\",\"txt\"=>\"身份证号码小于18位\"]; expresssion: @614 == 1, result: [\"interval\"=>3,\"head_code\"=>\"D1\",\"back_code\"=>\"11\",\"txt\"=>\"身份证扫描识别涉嫌欺诈\"]; expresssion: @616 > 0 && @616 <=30, result: [\"interval\"=>1,\"head_code\"=> \"D1\",\"back_code\"=>\"10\",\"txt\"=>\"芝麻IVS分过低\"]; expresssion: @41 > 0 && @41 < 550, result: [\"interval\"=>1,\"head_code\"=>\"D1\",\"back_code\"=>\"10\",\"txt\"=>\"芝麻分小于550\"]; expresssion: @617<1, result: [\"interval\"=>1,\"head_code\"=> \"D1\",\"back_code\"=>\"04\",\"txt\"=>\"秒还卡规则拒绝\"];",
+                    "childResults": [
+                        {
+                            "score": 1003.3931337518022,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "当前进行中的借款数量",
+                            "ruleId": 264,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.1046924376878,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "用户是否是老用户",
+                            "ruleId": 204,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.1670691323078,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "催收建议",
+                            "ruleId": 205,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.6946192942145,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "逾期天数",
+                            "ruleId": 206,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1002.4851804895123,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "年龄（身份证）",
+                            "ruleId": 11,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.4122549149165,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "新订单来源",
+                            "ruleId": 501,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.0491942958392,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "判断通讯录手机号数量",
+                            "ruleId": 14,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.4227543737395,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "互通过电话的号码数量检验",
+                            "ruleId": 7,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.0024040824455,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "实名认证规则",
+                            "ruleId": 1,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1000.6983793354943,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "关机情况检验",
+                            "ruleId": 8,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.8603693177135,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "后台还款记录",
+                            "ruleId": 48,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1002.8929757771942,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "月均话费",
+                            "ruleId": 49,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.5792908341015,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "人脸识别分",
+                            "ruleId": 261,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.6726145993937,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "第二联系人通话次数",
+                            "ruleId": 38,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1000.0129880644655,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "第一联系人通话次数",
+                            "ruleId": 37,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1000.0455969922317,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "身份证照片数量",
+                            "ruleId": 207,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.7841929552292,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": " 7天内不正常还款",
+                            "ruleId": 263,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1002.4201914560097,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "1个月内身份证使用过多设备进行申请",
+                            "ruleId": 54,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1002.458740317581,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "7天内设备使用过多的身份证或手机号进行申请",
+                            "ruleId": 55,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1000.948228129136,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "7天内身份证关联设备数",
+                            "ruleId": 56,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1002.8938306981529,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "蜜罐黑中介分",
+                            "ruleId": 42,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1000.3227327746322,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "实名时间限制规则",
+                            "ruleId": 2,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1002.4507149711746,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "第一联系人通话排名",
+                            "ruleId": 35,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1002.6610481212224,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "第二联系人通话排名",
+                            "ruleId": 36,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1000.1983502979735,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "通讯录有效号码数量",
+                            "ruleId": 320,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.2296889691116,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "历史最大逾期天数",
+                            "ruleId": 248,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.047271451117,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "设备曾用手机号",
+                            "ruleId": 15,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.3029751270444,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "注册号码、第一联系人、第二联系人是否相同",
+                            "ruleId": 612,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 100.4478572901608,
+                            "desc": "expression:strlen(@253)",
+                            "childResults": [
+                                {
+                                    "score": 1001.0816186347346,
+                                    "desc": "",
+                                    "childResults": [],
+                                    "ruleName": "身份证号",
+                                    "ruleId": 253,
+                                    "type": 0,
+                                    "extendType": 0
+                                }
+                            ],
+                            "ruleName": "身份证号码长度",
+                            "ruleId": 613,
+                            "type": 1,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1002.8859724507472,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "身份证扫描识别是否欺诈",
+                            "ruleId": 614,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1000.3966711490867,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "芝麻IVS分",
+                            "ruleId": 616,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.3178311307506,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "芝麻分",
+                            "ruleId": 41,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1003.4852992210068,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "秒还卡订单过滤",
+                            "ruleId": 617,
+                            "type": 0,
+                            "extendType": 0
+                        }
+                    ],
+                    "ruleName": "白条准入原则",
+                    "ruleId": 399,
+                    "type": 1,
+                    "extendType": 1
+                },
+                {
+                    "score": 1000.3513403036683,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "人脸识别",
+                    "ruleId": 219,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 10.477666431996019,
+                    "desc": " expresssion: @605 >= 10 && @606 >= 1000, result: 1;",
+                    "childResults": [
+                        {
+                            "score": 1000.0960947576581,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "公积金数据-最近一年缴纳月数",
+                            "ruleId": 605,
+                            "type": 0,
+                            "extendType": 0
+                        },
+                        {
+                            "score": 1001.4591200669071,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "公积金数据-最近一年缴纳平均金额",
+                            "ruleId": 606,
+                            "type": 0,
+                            "extendType": 0
+                        }
+                    ],
+                    "ruleName": "公积金数据决策",
+                    "ruleId": 608,
+                    "type": 1,
+                    "extendType": 1
+                }
+            ],
+            "ruleName": "决策树B",
+            "ruleId": 393,
+            "type": 1,
+            "extendType": 1
+        },
+        {
+            "score": 1000.3513403036683,
+            "desc": "",
+            "childResults": [],
+            "ruleName": "人脸识别",
+            "ruleId": 219,
+            "type": 0,
+            "extendType": 0
+        },
+        {
+            "score": 10.511799768914674,
+            "desc": " expresssion: @264 >= 2, result: [\"interval\"=>0,\"head_code\"=>\"D2\",\"back_code\"=>\"25\",\"txt\"=>\"已存在1笔借款中的订单\"]; expresssion: @204 == 1 && @205 == 0, result: [\"interval\"=>3,\"head_code\"=>\"D2\",\"back_code\"=>\"11\",\"txt\"=>\"老用户催收建议拒绝\"]; expresssion: @206 >= 10, result: [\"interval\"=>3, \"head_code\"=>\"D2\", \"back_code\"=>\"12\",\"txt\"=>\"历史借款订单逾期大于等于10天\"]; expresssion: @204 == 0 && (@11 < 20 || @11 > 37) , result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"01\",\"txt\"=>\"新用户借款年龄小于20或者大于37\"]; expresssion: @501 == 1 && @204 == 0 && @14 <= 30, result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=> \"09\",\"txt\"=>\"新用户通讯录手机号数量<=30\"]; expresssion: @204 == 0 && @7 <= 20 , result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=> \"09\",\"txt\"=>\"新用户手机互通过电话的号码小于等于20\"]; expresssion: @204 == 0 && @1 == 2, result: [\"interval\"=>1,\"head_code\"=> \"D2\",\"back_code\"=>\"02\",\"txt\"=>\"新用户手机运营商未实名\"]; expresssion: @8 > 5, result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"22\",\"txt\"=>\"连续关机天数>5\"]; expresssion: @48 == 15, result: [\"interval\"=>1,\"head_code\"=> \"D2\",\"back_code\"=>\"18\",\"txt\"=>\"后台历史还款逾期10天以上\"]; expresssion: @7 < 5, result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"19\",\"txt\"=>\"互通过的电话数量小于5个\"]; expresssion: @49 < 10 , result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"23\",\"txt\"=>\"月均话费小于10元\"]; expresssion: @261 > 0 && @261 < 50, result: [\"interval\"=>1,\"head_code\"=>\"D2\",\"back_code\"=>\"21\",\"txt\"=>\"人脸识别分低于50\"]; expresssion: @38 <= 0 && @37 <= 0 && @8 > 5, result: [\"interval\"=>0,\"head_code\"=>\"D2\",\"back_code\"=>\"20\",\"txt\"=>\"第一，第二联系人都没有过联系，且关机时间大于5\"]; expresssion: @204 == 0 && @207 < 3, result: [\"interval\"=>0, \"head_code\"=>\"D2\", \"back_code\"=>\"13\",\"txt\"=>\"新用户照片数量<3\"]; expresssion: @263 >= 2, result: [\"interval\"=>0,\"head_code\"=>\"D2\",\"back_code\"=>\"24\",\"txt\"=>\"7天内提前还款2次及以上\"]; expresssion: @54 > 4, result: [\"interval\"=>0, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"1个月内身份证使用设备进行申请大于4\"]; expresssion: @55 > 3, result: [\"interval\"=>0, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"7天内设备使用身份证或手机号申请大于3\"]; expresssion: @56 > 4 , result: [\"interval\"=>0, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"7天内身份证关联设备数大于4\"]; expresssion: @42 < 10, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"蜜罐黑中介分小于10\"]; expresssion: @2 <= 6, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"手机运营商实名时间<=6个月\"]; expresssion: @35 == -1 && @36 == -1, result: [\"interval\"=>0, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"第一，第二联系人都没有过联系\"]; expresssion: @320 < 20, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"通讯录有效号码数量小于20\"]; expresssion: @248 > 10, result: [\"interval\"=>1, \"head_code\"=>\"D1\", \"back_code\"=>\"11\",\"txt\"=>\"历史最大逾期天数>10\"]; expresssion: @15 >=2, result: [\"interval\"=>1,\"head_code\"=>\"D1\",\"back_code\"=>\"11\",\"txt\"=>\"设备曾用手机号>2\"]\t; expresssion: @612 == 1 , result: [\"interval\"=>3,\"head_code\"=>\"D2\",\"back_code\"=>\"26\",\"txt\"=>\"注册号码与第一、第二联系人存在相同项\"]; expresssion: @613 < 18, result: [\"interval\"=>3,\"head_code\"=>\"D2\",\"back_code\"=> \"27\",\"txt\"=>\"身份证号码小于18位\"]; expresssion: @614 == 1, result: [\"interval\"=>3,\"head_code\"=>\"D1\",\"back_code\"=>\"11\",\"txt\"=>\"身份证扫描识别涉嫌欺诈\"]; expresssion: @616 > 0 && @616 <=30, result: [\"interval\"=>1,\"head_code\"=> \"D1\",\"back_code\"=>\"10\",\"txt\"=>\"芝麻IVS分过低\"]; expresssion: @41 > 0 && @41 < 550, result: [\"interval\"=>1,\"head_code\"=>\"D1\",\"back_code\"=>\"10\",\"txt\"=>\"芝麻分小于550\"]; expresssion: @617<1, result: [\"interval\"=>1,\"head_code\"=> \"D1\",\"back_code\"=>\"04\",\"txt\"=>\"秒还卡规则拒绝\"];",
+            "childResults": [
+                {
+                    "score": 1003.3931337518022,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "当前进行中的借款数量",
+                    "ruleId": 264,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.1046924376878,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "用户是否是老用户",
+                    "ruleId": 204,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.1670691323078,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "催收建议",
+                    "ruleId": 205,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.6946192942145,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "逾期天数",
+                    "ruleId": 206,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.4851804895123,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "年龄（身份证）",
+                    "ruleId": 11,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.4122549149165,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "新订单来源",
+                    "ruleId": 501,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.0491942958392,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "判断通讯录手机号数量",
+                    "ruleId": 14,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.4227543737395,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "互通过电话的号码数量检验",
+                    "ruleId": 7,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.0024040824455,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "实名认证规则",
+                    "ruleId": 1,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.6983793354943,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "关机情况检验",
+                    "ruleId": 8,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.8603693177135,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "后台还款记录",
+                    "ruleId": 48,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.8929757771942,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "月均话费",
+                    "ruleId": 49,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.5792908341015,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "人脸识别分",
+                    "ruleId": 261,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.6726145993937,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "第二联系人通话次数",
+                    "ruleId": 38,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.0129880644655,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "第一联系人通话次数",
+                    "ruleId": 37,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.0455969922317,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "身份证照片数量",
+                    "ruleId": 207,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.7841929552292,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": " 7天内不正常还款",
+                    "ruleId": 263,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.4201914560097,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "1个月内身份证使用过多设备进行申请",
+                    "ruleId": 54,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.458740317581,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "7天内设备使用过多的身份证或手机号进行申请",
+                    "ruleId": 55,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.948228129136,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "7天内身份证关联设备数",
+                    "ruleId": 56,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.8938306981529,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "蜜罐黑中介分",
+                    "ruleId": 42,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.3227327746322,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "实名时间限制规则",
+                    "ruleId": 2,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.4507149711746,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "第一联系人通话排名",
+                    "ruleId": 35,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.6610481212224,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "第二联系人通话排名",
+                    "ruleId": 36,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.1983502979735,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "通讯录有效号码数量",
+                    "ruleId": 320,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.2296889691116,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "历史最大逾期天数",
+                    "ruleId": 248,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.047271451117,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "设备曾用手机号",
+                    "ruleId": 15,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.3029751270444,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "注册号码、第一联系人、第二联系人是否相同",
+                    "ruleId": 612,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 100.4478572901608,
+                    "desc": "expression:strlen(@253)",
+                    "childResults": [
+                        {
+                            "score": 1001.0816186347346,
+                            "desc": "",
+                            "childResults": [],
+                            "ruleName": "身份证号",
+                            "ruleId": 253,
+                            "type": 0,
+                            "extendType": 0
+                        }
+                    ],
+                    "ruleName": "身份证号码长度",
+                    "ruleId": 613,
+                    "type": 1,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.8859724507472,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "身份证扫描识别是否欺诈",
+                    "ruleId": 614,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.3966711490867,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "芝麻IVS分",
+                    "ruleId": 616,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.3178311307506,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "芝麻分",
+                    "ruleId": 41,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.4852992210068,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "秒还卡订单过滤",
+                    "ruleId": 617,
+                    "type": 0,
+                    "extendType": 0
+                }
+            ],
+            "ruleName": "白条准入原则",
+            "ruleId": 399,
+            "type": 1,
+            "extendType": 1
+        },
+        {
+            "score": 10.356457595532474,
+            "desc": " expresssion: @64 == 2, result: 1; expresssion: @65 == 2, result: 1; expresssion: @68 == 2, result: 1; expresssion: @73 == 2, result: 1; expresssion: @485 == 1, result: 1; expresssion: @387 == 2 , result: 1; expresssion: @75 == 2, result: 1; expresssion: @23 == 2, result: 1; expresssion: @24 == 2, result: 1; expresssion: @387 == 2 , result: 1; expresssion: @610 == 1, result: 1;",
+            "childResults": [
+                {
+                    "score": 1000.6265458609855,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "芝麻信用行业关注名单逾期未处理",
+                    "ruleId": 64,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.9651765412527,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "芝麻信用行业关注名单黑名单",
+                    "ruleId": 65,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.2149548487803,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "蜜罐黑名单",
+                    "ruleId": 68,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.9455847979352,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "白骑士反欺诈风险名单",
+                    "ruleId": 73,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1001.2789572583713,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "极速钱包黑名单",
+                    "ruleId": 485,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.8921178247377,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "百融特殊名单",
+                    "ruleId": 387,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.7714771599345,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "同盾其他黑名单",
+                    "ruleId": 75,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1002.7798859521715,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "同盾手机网贷黑名单",
+                    "ruleId": 23,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1000.9806277867093,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "同盾身份证网贷黑名单",
+                    "ruleId": 24,
+                    "type": 0,
+                    "extendType": 0
+                },
+                {
+                    "score": 1003.8609357925698,
+                    "desc": "",
+                    "childResults": [],
+                    "ruleName": "信用白条黑名单",
+                    "ruleId": 610,
+                    "type": 0,
+                    "extendType": 0
+                }
+            ],
+            "ruleName": "信用白条禁止项",
+            "ruleId": 397,
+            "type": 1,
+            "extendType": 1
+        },
+        {
+            "score": 1001.4122549149165,
+            "desc": "",
+            "childResults": [],
+            "ruleName": "新订单来源",
+            "ruleId": 501,
+            "type": 0,
+            "extendType": 0
+        },
+        {
+            "score": 1003.1046924376878,
+            "desc": "",
+            "childResults": [],
+            "ruleName": "用户是否是老用户",
+            "ruleId": 204,
+            "type": 0,
+            "extendType": 0
+        }
+    ],
+    "ruleName": "信用白条风控决策树",
+    "ruleId": 390,
+    "type": 1,
+    "extendType": 1
+}

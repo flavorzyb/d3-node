@@ -45,7 +45,7 @@ class RuleService
     }
 
     protected function loadRuleExtendMap() {
-        $sql = "SELECT `id`, `rule_id`, `expression`, `result`, `order` FROM `tb_rule_extend_mapping` WHERE `status` = 0";
+        $sql = "SELECT `id`, `rule_id`, `expression`, `result`, `order` FROM `tb_rule_extend_mapping` WHERE `status` = 0 ORDER BY `rule_id`, `order`";
         $query = $this->pdo->query($sql);
         $dataArray = $query->fetchAll(PDO::FETCH_ASSOC);
         $this->ruleExtendMapArray = [];
