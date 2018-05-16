@@ -11,9 +11,7 @@ $fp = fopen(__DIR__ . '/view/js/rule_data.json', 'wb+');
 $result = '[';
 foreach ($expressionArray as $id => $v) {
     $str = '{';
-    if (!is_string($v)) {
-        $v = '';
-    }
+    $v = floatval($v);
     $name = trim($ruleArray[$id]['name']);
     $str .= "\"id\": \"{$id}\",\"value\":\"{$v}\",\"name\":\"{$name}\"";
     $str.= '},';
