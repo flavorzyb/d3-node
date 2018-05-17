@@ -28,6 +28,11 @@ class RuleService
     private $ruleExtendNameExpression = [];
 
     /**
+     * @var array
+     */
+    private $ruleExtendChildren = [];
+
+    /**
      * NodeService constructor.
      */
     public function __construct()
@@ -170,5 +175,53 @@ class RuleService
 
     public function buildRuleExtendIndex() {
         return [];
+    }
+
+    public function findRuleChildren() {
+        foreach ($this->ruleExtendMapArray as $value) {
+            $children = $this->parseRuleExtendChildrenExpressionStr($value['expression']);
+            foreach ($children as $v) {
+                $this->ruleExtendChildren[$v] = $v;
+            }
+        }
+    }
+
+    private function parseRuleExtendChildrenExpressionStr($str) {
+        //解析表达式
+        $result = [];
+        preg_replace_callback(
+            "/@[0-9]+/",
+            function ($matches) use (&$result){
+                $id = intval(str_replace('@', '', $matches[0]));
+                $result[] = $id;
+                return $id;
+            },
+            $str);
+
+        return $result;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRuleExtendChildren(): array
+    {
+        return $this->ruleExtendChildren;
+    }
+
+    /**
+     * @return array
+     */
+    public function buildRuleExtendRoot(): array  {
+        $result = [];
+        foreach ($this->ruleExtendMapArray as $v) {
+            $id = $v['rule_id'];
+            if ((!isset($result[$id])) && (!isset($this->ruleExtendChildren[$id]))) {
+                $name = $this->ruleArray[$id]['name'] ?? '';
+                $result[$id] = ['id' => $id, 'name' => $name];
+            }
+        }
+
+        return $result;
     }
 }
