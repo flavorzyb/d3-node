@@ -8,4 +8,3 @@ $expressionArray = $service->getRuleExpression();
 $ruleArray = $service->getRuleArray();
 $service->executeRuleExtendNameExpression();
 $nameArray = $service->getRuleExtendNameExpression();
-var_dump($nameArray);

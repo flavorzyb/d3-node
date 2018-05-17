@@ -140,7 +140,7 @@ class RuleService
 
     public function executeRuleExtendNameExpression() {
         foreach ($this->ruleExtendMapArray as $v) {
-            $this->ruleExtendNameExpression[$v['rule_id']] = $this->parseRuleExtendNameExpressionStr($v['expression']);
+            $this->ruleExtendNameExpression[$v['rule_id']][] = $this->parseRuleExtendNameExpressionStr($v['expression']);
         }
     }
 
@@ -168,4 +168,7 @@ class RuleService
         return $this->ruleExtendNameExpression;
     }
 
+    public function buildRuleExtendIndex() {
+        return [];
+    }
 }

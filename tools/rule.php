@@ -40,11 +40,13 @@ foreach ($titleArray as $k => $v) {
 }
 
 $row = 2;
-foreach ($expressionArray as $id => $v) {
-    $sheet->setCellValueByColumnAndRow( 1, $row, $id);
-    $sheet->setCellValueByColumnAndRow( 2, $row, trim($ruleArray[$id]['name']));
-    $sheet->setCellValueByColumnAndRow( 3, $row, $v);
-    $row++;
+foreach ($expressionArray as $id => $dataArray) {
+    foreach ($dataArray as $v) {
+        $sheet->setCellValueByColumnAndRow( 1, $row, $id);
+        $sheet->setCellValueByColumnAndRow( 2, $row, trim($ruleArray[$id]['name']));
+        $sheet->setCellValueByColumnAndRow( 3, $row, $v);
+        $row++;
+    }
 }
 
 $writer = new Xlsx($spreadsheet);
