@@ -6,4 +6,6 @@ $service->loadAllData();
 $service->executeRuleExpression();
 $expressionArray = $service->getRuleExpression();
 $ruleArray = $service->getRuleArray();
-$indexArray = $service->buildRuleExtendIndex();
+$service->executeRuleExtendNameExpression();
+$nameArray = $service->getRuleExtendNameExpression();
+var_dump($nameArray);

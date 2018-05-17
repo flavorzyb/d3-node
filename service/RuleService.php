@@ -138,8 +138,10 @@ class RuleService
         return $this->ruleExpression;
     }
 
-    private function executeRuleExtendNameExpression() {
-        
+    public function executeRuleExtendNameExpression() {
+        foreach ($this->ruleExtendMapArray as $v) {
+            $this->ruleExtendNameExpression[$v['rule_id']] = $this->parseRuleExtendNameExpressionStr($v['expression']);
+        }
     }
 
     private function parseRuleExtendNameExpressionStr($str) {
@@ -148,16 +150,22 @@ class RuleService
             "/@[0-9]+/",
             function ($matches) {
                 $id = intval(str_replace('@', '', $matches[0]));
-                if (!isset($this->ruleExpression[$id])) {
-                    if (!isset($this->ruleArray[$id])) {
-                        throw new Exception("can not found rule id({$id}).");
-                    }
-
-                    $this->parseRuleExpression($this->ruleArray[$id]);
+                $result = '';
+                if (isset($this->ruleArray[$id])) {
+                    $result = $this->ruleArray[$id]['name'];
                 }
 
-                return $this->ruleExpression[$id];
+                return $result;
             },
             $str);
     }
+
+    /**
+     * @return array
+     */
+    public function getRuleExtendNameExpression(): array
+    {
+        return $this->ruleExtendNameExpression;
+    }
+
 }
